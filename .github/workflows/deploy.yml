@@ -19,7 +19,6 @@ jobs:
           node-version: '18'
 
       - name: Build Vite App
-        working-directory: frontend
         run: |
           npm install
           npm run build
@@ -31,6 +30,6 @@ jobs:
           username: ${{ secrets.REMOTE_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "file-manage-front/dist/*"
-          target: "/home/park/file-manager/file-manage-front"
+          source: "dist/*"
+          target: "/home/park/file-manager/frontend-dist"
           strip_components: 2
