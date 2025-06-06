@@ -31,6 +31,6 @@ jobs:
           username: ${{ secrets.REMOTE_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "frontend/dist/*"
-          target: "/home/ubuntu/file-manager/frontend-dist"
+          source: "file-manage-front/dist/*"
+          target: "/home/park/file-manager/file-manage-front"
           strip_components: 2
