@@ -23,7 +23,7 @@ function App() {
   const fetchFiles = async (path = '/') => {
     try {
       const res = await axios.get(`${API}/files`, { params: { path } });
-      setFiles(res.data.files);
+      setFiles(res.data);
       setCurrentPath(path);
     } catch (err) {
       console.error('파일 목록 가져오기 실패:', err);
